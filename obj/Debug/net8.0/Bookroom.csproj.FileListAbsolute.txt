@@ -287,3 +287,4 @@
 /Users/aravinth/Bookroom/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
 /Users/aravinth/Bookroom/bin/Debug/net8.0/MailKit.dll
 /Users/aravinth/Bookroom/bin/Debug/net8.0/MimeKit.dll
+/Users/aravinth/Bookroom/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
