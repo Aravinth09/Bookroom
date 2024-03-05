@@ -1,27 +1,35 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Bookroom.Models;
-using Microsoft.AspNetCore.Identity; 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Bookroom.Controllers;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Bookroom.Controllers;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<BookroomContext>().AddDefaultTokenProviders();
-
 builder.Services.AddControllers();
-builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
-builder.Services.AddScoped<EmailService>();
 builder.Services.AddDbContext<BookroomContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Connection")));
+
+
+ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<BookroomContext>().AddDefaultTokenProviders();
+
+ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddScoped<EmailService>();      
+
 builder.Services.AddScoped<RolesController>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+
+
+
+
 
             builder.Services.AddAuthentication(options =>
             {
@@ -44,7 +52,7 @@ builder.Services.AddScoped<RolesController>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -55,6 +63,7 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
+
 
 var summaries = new[]
 {
@@ -82,3 +91,5 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+
