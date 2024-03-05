@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{590EEBF7-292E-4BFF-9576-B4A7741BEB0F}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Bookingorder.cs">
+    <Files>
+      <File FileName="Models/Bookingorder.cs" Line="7" Column="25" />
+      <File FileName="Models/BookroomContext.cs" Line="1" Column="1" />
+      <File FileName="Models/Customer.cs" Line="1" Column="1" />
+      <File FileName="Models/Location.cs" Line="1" Column="1" />
+      <File FileName="Models/Rent.cs" Line="1" Column="1" />
+      <File FileName="Models/Roomtype.cs" Line="1" Column="1" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bookroom" expanded="True">
+            <Node name="Bookroom" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Bookroom PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

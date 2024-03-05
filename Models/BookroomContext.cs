@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Bookroom.Models;
  
 namespace Bookroom.Models
 {
@@ -46,6 +47,7 @@ namespace Bookroom.Models
                 .WithMany()
                 .HasForeignKey(op => op.RoomId);
         }
+        public DbSet<Bookroom.Models.Bookingorder> Bookingorder { get; set; } = default!;
     }
 }
 // using Microsoft.EntityFrameworkCore;
