@@ -1,10 +1,13 @@
 
-using Microsoft.EntityFrameworkCore;
 using Bookroom.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
  
 namespace Bookroom.Models
 {
-    public class BookroomContext : DbContext
+    public class BookroomContext : IdentityDbContext<IdentityUser>
     {
         public BookroomContext(DbContextOptions<BookroomContext> options) : base(options)
         {

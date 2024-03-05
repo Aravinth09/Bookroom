@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Bookroom.Models;
+using Microsoft.AspNetCore.Identity; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<BookroomContext>().AddDefaultTokenProviders();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<BookroomContext>(options =>
