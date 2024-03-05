@@ -284,3 +284,6 @@
 /Users/aravinth/Bookroom/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
 /Users/aravinth/Bookroom/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/aravinth/Bookroom/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/aravinth/Bookroom/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/aravinth/Bookroom/bin/Debug/net8.0/MailKit.dll
+/Users/aravinth/Bookroom/bin/Debug/net8.0/MimeKit.dll

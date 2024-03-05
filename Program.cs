@@ -12,6 +12,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<BookroomContext>().AddDefaultTokenProviders();
 
 builder.Services.AddControllers();
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddScoped<EmailService>();
 builder.Services.AddDbContext<BookroomContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Connection")));
 
