@@ -96,6 +96,10 @@ The OnModelCreating method can be overridden to provide additional configuration
 
 The roles will be assinged by the Admin based on the Roles the Users are restricted with certain actions which stands as best example for Authorisation and Authentication which adds up Security measures.
 
+Azure Deployment Link:
+
+https://bookroomapiuow.azurewebsites.net/weatherforecast
+
 
 
 
